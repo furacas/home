@@ -1,71 +1,106 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8" />
-    <title>北梦的个人主页</title>
-    <meta name="author" content="iami" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="HandheldFriendly" content="true" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" type="text/css" href="style/css/main.css" />
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        img.profile-pic {
+            border-radius: 50%;
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .works {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .works img {
+            width: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .works img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        /* 媒体查询，当屏幕宽度小于600px时生效 */
+        @media (max-width: 600px) {
+            body {
+                margin: 20px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            img.profile-pic {
+                width: 80px;
+            }
+
+            .works img {
+                width: 40px;
+            }
+        }
+    </style>
     <link rel="shortcut icon" href="https://www.furacas.com/img/favicon.ico" />
-  </head>
-  <body>
-    <div class="content-container">
-      <img class="avatar" src="https://www.furacas.com/img/avatar.jpg" />
-      <div class="text part1">
-        <div>
-          <span class="letter"
-            ><div class="character">北</div>
-            <span></span
-          ></span>
-          <span class="letter"
-            ><div class="character"></div>
-            <span></span
-          ></span>
-          <span class="letter"
-            ><div class="character">梦</div>
-            <span></span
-          ></span>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://www.furacas.com/img/avatar.jpg" alt="我的头像" class="profile-pic">
+
+        <p>你好！我是北梦，一名Java后端开发。</p>
+
+        <div class="works">
+            <a href="https://github.com/furacas" target="_blank">
+                <img width="50px" src="images/github.png" />
+            </a>
+            <a href="https://www.furacas.com" target="_blank">
+                <img width="50px" src="images/blog.png" />
+            </a>
+            <a href="https://lznb.com" target="_blank">
+                <img width="50px" src="images/cow.png" />
+            </a>
+
+           <a href="mailto:s.furacas@outlook.com">
+                <img width="50px" src="images/email.png" />
+            </a>
         </div>
-      </div>
-      <span class="bio">
-        <span style="transition-delay: 2s" class="emphasis">我</span>
-        <span style="transition-delay: 0.5s">喜欢</span>
-        <span style="transition-delay: 1s">天空</span>
-        <span style="transition-delay: 1.5s">的</span>
-        <span style="transition-delay: 2s">颜色</span>
-        <span style="transition-delay: 2.5s">风</span>
-        <span style="transition-delay: 3s">的</span>
-        <span style="transition-delay: 3.5s">味道</span>
-        <span style="transition-delay: 4s">大海</span>
-        <span style="transition-delay: 4.5s">的</span>
-        <span style="transition-delay: 5s">深度</span>
-        <span style="transition-delay: 5.5s">和</span>
-        <span style="transition-delay: 6s" class="emphasis">你</span>
-        <span style="transition-delay: 6.5s">的</span>
-        <span style="transition-delay: 7s">声音.</span>
-      </span>
-      <ul>
-        <li>
-          <a href="https://www.furacas.com" target="_blank">
-            <img width="50px" src="images/blog.png" />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/furacas" target="_blank">
-            <img width="50px" src="images/github.png" />
-          </a>
-        </li>
-      </ul>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>© 2023 furacas</p>
+        </footer>
     </div>
-    <div class="footer">
-      <a target="_self"
-        >&copy; 2022 Make By<a href="https://www.furacas.com" target="_blank"
-          >北梦</a
-        ></a
-      >
-    </div>
-    <script type="text/javascript" src="style/js//main.js"></script>
-  </body>
+</body>
+
 </html>
